@@ -4,9 +4,31 @@ import router from "./router";
 import store from "./store";
 
 import "element-plus/lib/theme-chalk/index.css";
-import { ElButton, ElSwitch } from "element-plus";
+import {
+  ElButton,
+  ElCol,
+  ElContainer,
+  ElFooter,
+  ElHeader,
+  ElMain,
+  ElRow,
+  ElSwitch,
+  ElDivider,
+  ElLink,
+} from "element-plus";
 
-const components = [ElButton, ElSwitch];
+const components = [
+  ElButton,
+  ElSwitch,
+  ElRow,
+  ElCol,
+  ElContainer,
+  ElHeader,
+  ElFooter,
+  ElMain,
+  ElDivider,
+  ElLink,
+];
 
 const app = createApp(App)
   .use(store)
