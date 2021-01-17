@@ -13,9 +13,10 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .el-footer {
   background: #d3dce6;
   text-align: center;
+  padding-top: 20px;
 }
 </style>

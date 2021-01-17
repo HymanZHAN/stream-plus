@@ -1,7 +1,11 @@
 <template>
   <el-main>
     <div id="login-nav">
-      <router-link to="/login/sign-in" custom v-slot="{ navigate, isActive }">
+      <router-link
+        :to="{ name: 'LoginSignIn' }"
+        custom
+        v-slot="{ navigate, isActive }"
+      >
         <el-link
           :type="isActive ? 'primary' : 'info'"
           @click="navigate"
@@ -11,7 +15,11 @@
         </el-link>
       </router-link>
       |
-      <router-link to="/login/register" custom v-slot="{ navigate, isActive }">
+      <router-link
+        :to="{ name: 'LoginRegister' }"
+        custom
+        v-slot="{ navigate, isActive }"
+      >
         <el-link
           :type="isActive ? 'primary' : 'info'"
           @click="navigate"
@@ -21,7 +29,7 @@
         </el-link>
       </router-link>
     </div>
-    <router-view />
+    <router-view></router-view>
   </el-main>
 </template>
 
@@ -42,6 +50,6 @@ export default defineComponent({
   text-align: center;
 }
 .el-link {
-  font-size: 18px;
+  font-size: 20px;
 }
 </style>

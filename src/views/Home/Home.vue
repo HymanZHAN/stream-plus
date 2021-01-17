@@ -15,5 +15,6 @@ export default {
 <style lang="scss" scoped>
 #home {
   text-align: center;
+  margin-top: 20px;
 }
 </style>

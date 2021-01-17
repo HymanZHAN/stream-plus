@@ -15,6 +15,9 @@ import {
   ElSwitch,
   ElDivider,
   ElLink,
+  ElForm,
+  ElFormItem,
+  ElInput,
 } from "element-plus";
 
 const components = [
@@ -28,6 +31,9 @@ const components = [
   ElMain,
   ElDivider,
   ElLink,
+  ElForm,
+  ElFormItem,
+  ElInput,
 ];
 
 const app = createApp(App)
