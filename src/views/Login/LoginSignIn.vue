@@ -109,6 +109,7 @@ export default defineComponent({
             });
           } else {
             signInForm.value?.resetFields();
+            genNewVerificationCode();
             ElMessage.error({
               message: "手机号或密码错误",
               type: "error",
