@@ -71,8 +71,8 @@ export default defineComponent({
       validateRandomAscii,
     } = useRandomAscii(4);
 
-    // 表单验证
-    const signInForm = ref(ElForm);
+    // 表单验证及其规则
+    const signInForm = ref<typeof ElForm>();
     const signInFormModel = reactive({
       phone: "",
       password: "",
@@ -91,7 +91,7 @@ export default defineComponent({
     };
 
     const submitForm = () => {
-      signInForm.value.validate((valid: boolean) => {
+      signInForm.value?.validate((valid: boolean) => {
         if (valid) {
           const registeredUser: User = JSON.parse(
             localStorage.getItem("user") || "{}"
@@ -108,6 +108,7 @@ export default defineComponent({
               name: "Home",
             });
           } else {
+            signInForm.value?.resetFields();
             ElMessage.error({
               message: "手机号或密码错误",
               type: "error",

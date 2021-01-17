@@ -70,7 +70,7 @@ export default defineComponent({
   name: "LoginRegister",
 
   setup() {
-    const registerForm = ref(ElForm);
+    const registerForm = ref<typeof ElForm>();
 
     const registerFormModel = reactive({
       phone: "",
@@ -146,7 +146,7 @@ export default defineComponent({
     // methods
 
     const submitForm = () => {
-      registerForm.value.validate((valid: boolean) => {
+      registerForm.value?.validate((valid: boolean) => {
         if (valid) {
           ElMessage.success({
             message: "注册成功",
